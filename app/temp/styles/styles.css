@@ -544,11 +544,19 @@ a {
   }
 
 .row--gutters {
-    margin-right: -4.0625rem;
+    margin-right: -4.0625em;
   }
+
+.row--gutters-large {
+      margin-right: -6.25em;
+    }
 
 .row--gutters > div {
     padding-right: 4.0625rem;
+  }
+
+.row--gutters-large > div {
+    padding-right: 6.25rem;
   }
 
 .row__b-margin-until-md {
@@ -559,7 +567,7 @@ a {
     .row__b-margin-until-md {
       margin-bottom: 0;
     }
-    
+
     .row__col-md-4 {
       float: left;
       width: 33.33333333333333%;
@@ -568,6 +576,11 @@ a {
       .row__col-md-4--larger {
         width: 37%;
       }
+
+    .row__col-md-6 {
+      float: left;
+      width: 50%;
+    }
 
     .row__col-md-8 {
       float: left;
@@ -586,8 +599,9 @@ a {
   }
 
 .generic-content p {
+    font-weight: 300;
     line-height: 1.65;
-    margin: 1.8em 0;
+    margin: 0 0 1.8em 0;
   }
 
 @media (min-width: 33.125rem) {
@@ -599,4 +613,79 @@ a {
 
 .generic-content p a {
     font-weight: bold;
+  }
+
+.section-heading {
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (min-width: 33.125rem) {
+
+.section-heading {
+    font-size: 3.75rem
+}
+  }
+
+.section-heading__icon {
+    display: block;
+    margin-right: auto;
+    margin-bottom: .6em;
+    margin-left: auto;
+  }
+
+@media (min-width: 33.125rem) {
+
+.section-heading__icon {
+      display: inline-block;
+      margin-right: .5em;
+      margin-bottom: 0
+  }
+  }
+
+.section-heading strong {
+    font-weight: 500;
+  }
+
+.feature-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 33.125rem) {
+
+.feature-item {
+    padding-left: 5.875rem
+}
+  }
+
+.feature-item__icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+@media (min-width: 33.125rem) {
+
+.feature-item__icon {
+      position: absolute;
+      left: 0
+  }
+  }
+
+.feature-item__heading {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: .7em;
+    margin-bottom: .8em;
+  }
+
+@media (min-width: 33.125rem) {
+
+.feature-item__heading {
+      font-size: 1.875rem;
+      text-align: left;
+      margin-top: 1em
+  }
   }
