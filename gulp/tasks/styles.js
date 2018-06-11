@@ -7,7 +7,7 @@ const gulp = require('gulp'),
       nesting = require('postcss-nested'),
       autoprefixer = require('autoprefixer');
 
-gulp.task('styles', () => {
+gulp.task('css', () => {
   return gulp.src('./app/assets/styles/styles.css')
     .pipe(postCSS([
       importCSS,
