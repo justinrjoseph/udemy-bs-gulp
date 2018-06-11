@@ -2,11 +2,11 @@
   &--gutters {
     margin-right: -4.0625em;
 
-    &-small {
+    &-sm {
       margin-right: -2.8125em;
     }
 
-    &-large {
+    &-lg {
       margin-right: -6.25em;
     }
   }

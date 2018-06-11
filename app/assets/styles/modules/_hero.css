@@ -1,4 +1,4 @@
-.large-hero {
+.hero {
   position: relative;
   border-bottom: .625rem solid $mainBlue;
 
@@ -12,6 +12,11 @@
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
+    padding-top: 5.5rem;
+
+    @mixin atMedium {
+      padding-top: 3.75rem;
+    }
   }
 
   &__heading,
