@@ -490,6 +490,19 @@ a {
     padding-left: 0;
   }
 
+.item-to-reveal {
+  opacity: 0;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  transition: all 1.5s ease-out;
+}
+
+.item-to-reveal--visible {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
 .site-header {
   position: absolute;
   width: 100%;
