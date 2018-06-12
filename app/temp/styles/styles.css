@@ -494,7 +494,8 @@ a {
   position: absolute;
   width: 100%;
   padding: .625rem 0;
-  z-index: 1;
+  z-index: 2;
+  transition: background-color .3s ease-out;
 }
 
 @media (min-width: 50rem) {
@@ -527,13 +528,24 @@ a {
   }
 
 .site-header__menu {
-    display: none;
+    position: relative;    
+    padding-top: 5.625rem;
+    text-align: center;
+    z-index: -10;
+    opacity: 0;
+    transition: all .3s ease-out;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 
 @media (min-width: 50rem) {
 
 .site-header__menu {
-      display: block
+      padding-top: 0;
+      opacity: 1;
+      z-index: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1)
   }
   }
 
@@ -542,9 +554,62 @@ a {
       top: .625rem;
       right: .625rem;
       width: 1.25rem;
-      height: 1.25rem;
-      background-color: white;
+      height: 1.1875rem;
+      z-index: 10;
+      cursor: pointer;
     }
+
+.site-header__menu-icon::before,
+      .site-header__menu-icon::after {
+        content: '';
+        transition: -webkit-transform .3s ease-out;
+        transition: transform .3s ease-out;
+        transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+      }
+
+.site-header__menu-icon::before,
+      .site-header__menu-icon__middle,
+      .site-header__menu-icon::after {
+        position: absolute;
+        width: 1.25rem;
+        height: .1875rem;
+        background-color: #fff;
+      }
+
+.site-header__menu-icon::before {
+        top: 0;
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+      }
+
+.site-header__menu-icon__middle {
+        top: .5rem;
+        -webkit-transform-origin: 0 50%;
+                transform-origin: 0 50%;
+        transition: all .3s ease-out;
+      }
+
+.site-header__menu-icon::after {
+        bottom: 0;
+        -webkit-transform-origin: 0 100%;
+                transform-origin: 0 100%;
+      }
+
+.site-header__menu-icon--close-x::before {
+          -webkit-transform: rotate(45deg) scaleX(1.25);
+                  transform: rotate(45deg) scaleX(1.25);          
+        }
+
+.site-header__menu-icon--close-x .site-header__menu-icon__middle {
+          opacity: 0;
+          -webkit-transform: scaleX(0);
+                  transform: scaleX(0);
+        }
+
+.site-header__menu-icon--close-x::after {
+          -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(.0625rem);
+                  transform: rotate(-45deg) scaleX(1.25) translateY(.0625rem);
+        }
 
 @media (min-width: 50rem) {
 
@@ -553,13 +618,35 @@ a {
     }
   }
 
+.site-header__menu--visible {
+      opacity: 1;
+      z-index: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+
+@media (min-width: 50rem) {
+
 .site-header__btn-container {
-    float: right;
+      float: right
+  }
+  }
+
+.site-header--expanded {
+    background-color: rgba(47,85,114, .55);
   }
 
 .site-nav {
   height: 2.625rem;
+  padding-top: .625rem;
 }
+
+@media (min-width: 50rem) {
+
+.site-nav {
+    padding-top: 0
+}
+  }
 
 .site-nav ul {
     display: table;
@@ -577,18 +664,51 @@ a {
 .site-nav li {
     display: table-cell;
     list-style: none;
-    padding-right: 1.25rem;
+    padding-right: .6rem;
     vertical-align: middle;
   }
 
-.site-nav a {
-    color: #fff;
-    font-weight: 300;
-    text-decoration: none;
+@media (min-width: 50rem) {
+
+.site-nav li {
+      padding-right: 1.25rem
+  }
   }
 
+.site-nav li:last-child {
+      padding-right: 0;
+    }
+
+@media (min-width: 50rem) {
+
+.site-nav li:last-child {
+        padding-right: 1.25rem
+    }
+  }
+
+.site-nav a {
+    background-color: rgba(47,85,114, .5);
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 300;
+    text-decoration: none;
+    padding: .3125rem .5rem;
+  }
+
+@media (min-width: 50rem) {
+
+.site-nav a {
+      background-color: transparent;
+      font-size: 1rem;
+      padding: .75rem 0
+  }
+  }
+
+@media (min-width: 50rem) {
+
 .site-nav--pull-right {
-    float: right;
+      float: right    
+  }
   }
 
 .page-section {

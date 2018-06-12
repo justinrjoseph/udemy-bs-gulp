@@ -1,5 +1,10 @@
 .site-nav {
   height: 2.625rem;
+  padding-top: .625rem;
+
+  @mixin atMedium {
+    padding-top: 0;
+  }
 
   ul {
     display: table;
@@ -12,17 +17,40 @@
   li {
     display: table-cell;
     list-style: none;
-    padding-right: 1.25rem;
+    padding-right: .6rem;
     vertical-align: middle;
+
+    @mixin atMedium {
+      padding-right: 1.25rem;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      @mixin atMedium {
+        padding-right: 1.25rem;
+      }
+    }
   }
 
   a {
+    background-color: rgba($mainBlue, .5);
     color: #fff;
+    font-size: .8rem;
     font-weight: 300;
     text-decoration: none;
+    padding: .3125rem .5rem;
+
+    @mixin atMedium {
+      background-color: transparent;
+      font-size: 1rem;
+      padding: .75rem 0;
+    }
   }
 
   &--pull-right {
-    float: right;
+    @mixin atMedium {
+      float: right;
+    }    
   }
 }

@@ -2,7 +2,8 @@
   position: absolute;
   width: 100%;
   padding: .625rem 0;
-  z-index: 1;
+  z-index: 2;
+  transition: background-color .3s ease-out;
 
   @mixin atMedium {
     background-color: rgba($mainBlue, .3);
@@ -25,10 +26,19 @@
   }
 
   &__menu {
-    display: none;
+    position: relative;    
+    padding-top: 5.625rem;
+    text-align: center;
+    z-index: -10;
+    opacity: 0;
+    transition: all .3s ease-out;
+    transform: scale(1.2);
 
     @mixin atMedium {
-      display: block;
+      padding-top: 0;
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
     }
 
     &-icon {
@@ -36,16 +46,75 @@
       top: .625rem;
       right: .625rem;
       width: 1.25rem;
-      height: 1.25rem;
-      background-color: white;
+      height: 1.1875rem;
+      z-index: 10;
+      cursor: pointer;
+      
+      &::before,
+      &::after {
+        content: '';
+        transition: transform .3s ease-out;
+      }
+
+      &::before,
+      &__middle,
+      &::after {
+        position: absolute;
+        width: 1.25rem;
+        height: .1875rem;
+        background-color: #fff;
+      }
+
+      &::before {
+        top: 0;
+        transform-origin: 0 0;
+      }
+
+      &__middle {
+        top: .5rem;
+        transform-origin: 0 50%;
+        transition: all .3s ease-out;
+      }
+
+      &::after {
+        bottom: 0;
+        transform-origin: 0 100%;
+      }
+
+      &--close-x {
+        &::before {
+          transform: rotate(45deg) scaleX(1.25);          
+        }
+
+        .site-header__menu-icon__middle {
+          opacity: 0;
+          transform: scaleX(0);
+        }
+
+        &::after {
+          transform: rotate(-45deg) scaleX(1.25) translateY(.0625rem);
+        }
+      }
 
       @mixin atMedium {
         display: none;
       }
     }
+
+    &--visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
+    }
   }
 
   &__btn-container {
-    float: right;
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
+  &--expanded {
+    background-color: rgba($mainBlue, .55);
   }
 }
