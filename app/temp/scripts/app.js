@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./events/smooth-scroll */ \"./app/assets/scripts/events/smooth-scroll.js\");\n\n__webpack_require__(/*! ./events/mobile-menu */ \"./app/assets/scripts/events/mobile-menu.js\");\n\n__webpack_require__(/*! ./events/site-header */ \"./app/assets/scripts/events/site-header.js\");\n\n__webpack_require__(/*! ./events/reveal-on-scroll */ \"./app/assets/scripts/events/reveal-on-scroll.js\");\n\n//# sourceURL=webpack:///./app/assets/scripts/app.js?");
+eval("\n\n__webpack_require__(/*! ./events/smooth-scroll */ \"./app/assets/scripts/events/smooth-scroll.js\");\n\n__webpack_require__(/*! ./events/mobile-menu */ \"./app/assets/scripts/events/mobile-menu.js\");\n\n__webpack_require__(/*! ./events/site-header */ \"./app/assets/scripts/events/site-header.js\");\n\n__webpack_require__(/*! ./events/reveal-on-scroll */ \"./app/assets/scripts/events/reveal-on-scroll.js\");\n\n__webpack_require__(/*! ./events/modal */ \"./app/assets/scripts/events/modal.js\");\n\n//# sourceURL=webpack:///./app/assets/scripts/app.js?");
 
 /***/ }),
 
@@ -107,6 +107,18 @@ eval("\n\n__webpack_require__(/*! ./events/smooth-scroll */ \"./app/assets/scrip
 
 "use strict";
 eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _mobileMenu = __webpack_require__(/*! ../modules/mobile-menu */ \"./app/assets/scripts/modules/mobile-menu.js\");\n\nvar _mobileMenu2 = _interopRequireDefault(_mobileMenu);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(function () {\n  var mobileMenu = new _mobileMenu2.default();\n\n  mobileMenu.icon.on('click', function () {\n    return mobileMenu.toggle();\n  });\n});\n\n//# sourceURL=webpack:///./app/assets/scripts/events/mobile-menu.js?");
+
+/***/ }),
+
+/***/ "./app/assets/scripts/events/modal.js":
+/*!********************************************!*\
+  !*** ./app/assets/scripts/events/modal.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _modal = __webpack_require__(/*! ../modules/modal */ \"./app/assets/scripts/modules/modal.js\");\n\nvar _modal2 = _interopRequireDefault(_modal);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(function () {\n  var modal = new _modal2.default();\n\n  modal.openButton.on('click', function () {\n    return modal.open();\n  });\n  modal.closeEl.on('click', function () {\n    return modal.close();\n  });\n\n  (0, _jquery2.default)(document).on('keyup', function (e) {\n    return modal.closeByKey(e);\n  });\n});\n\n//# sourceURL=webpack:///./app/assets/scripts/events/modal.js?");
 
 /***/ }),
 
@@ -155,6 +167,18 @@ eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquer
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _siteHeader = __webpack_require__(/*! ./site-header */ \"./app/assets/scripts/modules/site-header.js\");\n\nvar _siteHeader2 = _interopRequireDefault(_siteHeader);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar MobileMenu = function () {\n  function MobileMenu() {\n    _classCallCheck(this, MobileMenu);\n\n    this.icon = (0, _jquery2.default)('.site-header__menu-icon');\n    this.content = (0, _jquery2.default)('.site-header__menu');\n  }\n\n  _createClass(MobileMenu, [{\n    key: 'toggle',\n    value: function toggle() {\n      var siteHeader = new _siteHeader2.default();\n\n      siteHeader.el.toggleClass('site-header--expanded');\n\n      this.content.toggleClass('site-header__menu--visible');\n      this.icon.toggleClass('site-header__menu-icon--close-x');\n    }\n  }]);\n\n  return MobileMenu;\n}();\n\nexports.default = MobileMenu;\n\n//# sourceURL=webpack:///./app/assets/scripts/modules/mobile-menu.js?");
+
+/***/ }),
+
+/***/ "./app/assets/scripts/modules/modal.js":
+/*!*********************************************!*\
+  !*** ./app/assets/scripts/modules/modal.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Modal = function () {\n  function Modal() {\n    _classCallCheck(this, Modal);\n\n    this.openButton = (0, _jquery2.default)('.open-modal');\n    this.el = (0, _jquery2.default)('.modal');\n    this.closeEl = (0, _jquery2.default)('.modal__close');\n  }\n\n  _createClass(Modal, [{\n    key: 'open',\n    value: function open() {\n      this.el.addClass('modal--visible');\n      return false;\n    }\n  }, {\n    key: 'close',\n    value: function close() {\n      this.el.removeClass('modal--visible');\n    }\n  }, {\n    key: 'closeByKey',\n    value: function closeByKey(e) {\n      if (e.keyCode === 27) this.close();\n    }\n  }]);\n\n  return Modal;\n}();\n\nexports.default = Modal;\n\n//# sourceURL=webpack:///./app/assets/scripts/modules/modal.js?");
 
 /***/ }),
 

@@ -1,0 +1,47 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .94);
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.2);
+  transition: transform .3s ease-out;
+
+  &__body {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__msg {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.65;
+  }
+
+  &__close {
+    position: absolute;
+    top: .9375rem;
+    right: .9375rem;
+    color: $mainBlue;
+    font-size: 2rem;
+    transform: scaleX(1.2);
+    transform-origin: 100% 0;
+    cursor: pointer;
+
+    &:hover {
+      color: $mainOrange;
+    }
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}

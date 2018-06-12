@@ -5,6 +5,10 @@
   margin-left: auto;
   overflow: hidden;
 
+  &--narrow {
+    max-width: 29.375rem;
+  }
+
   &--md {
     max-width: 61rem;
   }
