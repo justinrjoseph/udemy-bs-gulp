@@ -1,5 +1,10 @@
 module.exports = {
   sprite: {
+    shape: {
+      spacing: {
+        padding: 1
+      }
+    },
     mode: {
       css: {
         variables: {

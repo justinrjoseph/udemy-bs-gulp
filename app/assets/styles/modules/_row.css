@@ -89,7 +89,7 @@
     }
   }
 
-  &--eq-height-at-md {
+  .flexbox &--eq-height-at-md {
     @mixin atMedium {
       display: flex;
     }
@@ -100,7 +100,7 @@
     }
   }
 
-  &--eq-height-at-lg {
+  .flexbox &--eq-height-at-lg {
     @mixin atLarge {
       display: flex;
     }
