@@ -106,7 +106,7 @@ eval("\n\n__webpack_require__(/*! ./events/smooth-scroll */ \"./app/assets/scrip
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n//# sourceURL=webpack:///./app/assets/scripts/events/lazy-load.js?");
+eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _lazyLoad = __webpack_require__(/*! ../modules/lazy-load */ \"./app/assets/scripts/modules/lazy-load.js\");\n\nvar _lazyLoad2 = _interopRequireDefault(_lazyLoad);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(function () {\n  var lazyLoad = new _lazyLoad2.default();\n\n  lazyload.refreshWaypoints();\n});\n\n//# sourceURL=webpack:///./app/assets/scripts/events/lazy-load.js?");
 
 /***/ }),
 
@@ -167,6 +167,18 @@ eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquer
 
 "use strict";
 eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _smoothScroll = __webpack_require__(/*! ../modules/smooth-scroll */ \"./app/assets/scripts/modules/smooth-scroll.js\");\n\nvar _smoothScroll2 = _interopRequireDefault(_smoothScroll);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(function () {\n  var smoothScroll = new _smoothScroll2.default();\n\n  smoothScroll.enable();\n});\n\n//# sourceURL=webpack:///./app/assets/scripts/events/smooth-scroll.js?");
+
+/***/ }),
+
+/***/ "./app/assets/scripts/modules/lazy-load.js":
+/*!*************************************************!*\
+  !*** ./app/assets/scripts/modules/lazy-load.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _noframework = __webpack_require__(/*! ../../../../node_modules/waypoints/lib/noframework.waypoints */ \"./node_modules/waypoints/lib/noframework.waypoints.js\");\n\nvar _noframework2 = _interopRequireDefault(_noframework);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar LazyLoad = function () {\n  function LazyLoad() {\n    _classCallCheck(this, LazyLoad);\n\n    this.images = (0, _jquery2.default)('.lazyload');\n  }\n\n  _createClass(LazyLoad, [{\n    key: 'refreshWaypoints',\n    value: function refreshWaypoints() {\n      this.images.on('load', function () {\n        Waypoint.refreshAll();\n      });\n    }\n  }]);\n\n  return LazyLoad;\n}();\n\nexports.default = LazyLoad;\n\n//# sourceURL=webpack:///./app/assets/scripts/modules/lazy-load.js?");
 
 /***/ }),
 
