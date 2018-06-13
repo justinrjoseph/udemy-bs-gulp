@@ -94,7 +94,19 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./events/smooth-scroll */ \"./app/assets/scripts/events/smooth-scroll.js\");\n\n__webpack_require__(/*! ./events/mobile-menu */ \"./app/assets/scripts/events/mobile-menu.js\");\n\n__webpack_require__(/*! ./events/site-header */ \"./app/assets/scripts/events/site-header.js\");\n\n__webpack_require__(/*! ./events/reveal-on-scroll */ \"./app/assets/scripts/events/reveal-on-scroll.js\");\n\n__webpack_require__(/*! ./events/modal */ \"./app/assets/scripts/events/modal.js\");\n\n//# sourceURL=webpack:///./app/assets/scripts/app.js?");
+eval("\n\n__webpack_require__(/*! ./events/smooth-scroll */ \"./app/assets/scripts/events/smooth-scroll.js\");\n\n__webpack_require__(/*! ./events/mobile-menu */ \"./app/assets/scripts/events/mobile-menu.js\");\n\n__webpack_require__(/*! ./events/site-header */ \"./app/assets/scripts/events/site-header.js\");\n\n__webpack_require__(/*! ./events/reveal-on-scroll */ \"./app/assets/scripts/events/reveal-on-scroll.js\");\n\n__webpack_require__(/*! ./events/modal */ \"./app/assets/scripts/events/modal.js\");\n\n__webpack_require__(/*! ./events/lazy-load */ \"./app/assets/scripts/events/lazy-load.js\");\n\n//# sourceURL=webpack:///./app/assets/scripts/app.js?");
+
+/***/ }),
+
+/***/ "./app/assets/scripts/events/lazy-load.js":
+/*!************************************************!*\
+  !*** ./app/assets/scripts/events/lazy-load.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n//# sourceURL=webpack:///./app/assets/scripts/events/lazy-load.js?");
 
 /***/ }),
 
