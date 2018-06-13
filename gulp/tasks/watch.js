@@ -1,8 +1,9 @@
 const gulp = require('gulp'),
       watch = require('gulp-watch'),
-      browser = require('browser-sync').create();
+      browser = require('browser-sync').create(),
+      { watchTask, injectCSS, refreshJS, css, js} = require('./');
 
-gulp.task('watch', () => {
+gulp.task(watchTask, () => {
   browser.init({
     notify: false,
     server: {
@@ -12,14 +13,14 @@ gulp.task('watch', () => {
 
   watch('./app/index.html', () => browser.reload());
 
-  watch('./app/assets/styles/**/*.css', () => gulp.start('injectCSS'));
+  watch('./app/assets/styles/**/*.css', () => gulp.start(injectCSS));
 
-  watch('./app/assets/scripts/**/*.js', () => gulp.start('refreshJS'));
+  watch('./app/assets/scripts/**/*.js', () => gulp.start(refreshJS));
 });
 
-gulp.task('injectCSS', ['css'], () => {
+gulp.task(injectCSS, [css], () => {
   return gulp.src('./app/temp/styles/styles.css')
     .pipe(browser.stream());
 });
 
-gulp.task('refreshJS', ['js'], () => browser.reload());
+gulp.task(refreshJS, [js], () => browser.reload());

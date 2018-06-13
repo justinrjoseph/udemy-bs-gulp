@@ -1,7 +1,8 @@
 const gulp = require('gulp'),
-      modernizr = require('gulp-modernizr');
+      modernizr = require('gulp-modernizr'),
+      { modernizrTask } = require('./');
 
-gulp.task('modernizr', () => {
+gulp.task(modernizrTask, () => {
   return gulp.src([
     './app/assets/styles/**/*.css',
     './app/assets/scripts/**/*.js'

@@ -5,9 +5,10 @@ const gulp = require('gulp'),
       hexrgba = require('postcss-hexrgba'),
       mixins = require('postcss-mixins'),
       nesting = require('postcss-nested'),
-      autoprefixer = require('autoprefixer');
+      autoprefixer = require('autoprefixer'),
+      { css } = require('./');
 
-gulp.task('css', () => {
+gulp.task(css, () => {
   return gulp.src('./app/assets/styles/styles.css')
     .pipe(postCSS([
       importCSS,

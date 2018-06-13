@@ -1,0 +1,21 @@
+module.exports = {
+  watchTask: 'watch',
+  injectCSS: 'injectCSS',
+  refreshJS: 'refreshJS',
+  css: 'css',
+  js: 'js',
+  cleanSprites: 'cleanSprites',
+  createSvgSprite: 'createSvgSprite',
+  createPngSprite: 'createPngSprite',
+  copySpriteFile: 'copySpriteFile',
+  copySpriteCSS: 'copySpriteCSS',
+  cleanTempSprite: 'cleanTempSprite',
+  icons: 'icons',
+  modernizrTask: 'modernizr',
+  deleteDist: 'deleteDist',
+  copyMiscFiles: 'copyMiscFiles',
+  optimizeImgs: 'optimizeImgs',
+  useminTask: 'usemin',
+  build: 'build',
+  previewDist: 'previewDist'
+};
