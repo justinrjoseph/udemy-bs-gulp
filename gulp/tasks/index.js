@@ -15,6 +15,7 @@ module.exports = {
   deleteDist: 'deleteDist',
   copyMiscFiles: 'copyMiscFiles',
   optimizeImgs: 'optimizeImgs',
+  useminTrigger: 'useminTrigger',
   useminTask: 'usemin',
   build: 'build',
   previewDist: 'previewDist'
