@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
+import '../../../../node_modules/waypoints/lib/noframework.waypoints';
 
 import PageSection from '../modules/page-section';
 
@@ -41,7 +41,7 @@ class SiteHeader {
           if ( direction === 'down' ) {
             self.links.removeClass('active');
 
-            const matchingLink = $(currentPageSection).data('match');            
+            const matchingLink = $(currentPageSection).data('match');
             $(matchingLink).addClass('active');
           }
         },
@@ -54,13 +54,13 @@ class SiteHeader {
           if ( direction === 'up' ) {
             self.links.removeClass('active');
 
-            const matchingLink = $(currentPageSection).data('match');            
+            const matchingLink = $(currentPageSection).data('match');
             $(matchingLink).addClass('active');
           }
         },
         offset: '-40%'
       });
-    });  
+    });
   }
 }
 

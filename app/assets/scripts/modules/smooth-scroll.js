@@ -1,5 +1,5 @@
 import SiteHeader from './site-header';
-import smoothScroll from 'jquery-smooth-scroll';
+import 'jquery-smooth-scroll';
 
 class SmoothScroll {
   constructor() {
