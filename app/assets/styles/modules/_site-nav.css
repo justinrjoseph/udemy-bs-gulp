@@ -10,7 +10,7 @@
     display: table;
     height: inherit;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     @mixin clearfix;
   }
 
