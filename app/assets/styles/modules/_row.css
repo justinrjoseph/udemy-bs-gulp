@@ -19,11 +19,11 @@
     padding-right: 4.0625rem;
   }
 
-  &--gutters-large > div {
+  &--gutters-lg > div {
     padding-right: 6.25rem;
   }
 
-  &--gutters-small > div {
+  &--gutters-sm > div {
     padding-right: 2.8125rem;
   }
 

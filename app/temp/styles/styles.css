@@ -698,7 +698,7 @@ a {
 .site-nav li {
     display: table-cell;
     list-style: none;
-    padding-right: .6rem;
+    padding-right: 2.4rem;
     vertical-align: middle;
   }
 
@@ -967,11 +967,11 @@ a {
     padding-right: 4.0625rem;
   }
 
-.row--gutters-large > div {
+.row--gutters-lg > div {
     padding-right: 6.25rem;
   }
 
-.row--gutters-small > div {
+.row--gutters-sm > div {
     padding-right: 2.8125rem;
   }
 
